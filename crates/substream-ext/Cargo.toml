@@ -1,0 +1,12 @@
+[package]
+name = "substream-ext"
+description = "Protocol-aware stream management layer provides protocol negotiation, lifecycle tracking, and stream coordination on top of libp2p's base multiplexing."
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+libp2p = { workspace = true, features = ["identify"] }
+smallvec = "1.11.2"
+tracing = { workspace = true }

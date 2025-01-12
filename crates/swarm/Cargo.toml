@@ -1,0 +1,7 @@
+[package]
+name = "swarm"
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+
+[dependencies]

@@ -1,0 +1,61 @@
+[workspace.package]
+authors = ["Amidamaru <ardtimeit@gmail.com>"]
+version = "0.1.0"
+license = "MIT or Apache-2.0"
+edition = "2021"
+
+[workspace]
+resolver = "2"
+members = [ 
+    # libs
+    "crates/substream-ext", 
+    "crates/swarm"
+]
+
+[workspace.dependencies]
+anyhow = "1"
+async-semaphore = "1.2.0"
+async-trait = "0.1"
+asynchronous-codec = "0.7.0"
+bcs ="0.1.6"
+bitflags = "2.6"
+blake2 = "0.10.6"
+bytes = "1.5"
+# axum = { version = "0.7.7" }
+chrono = { default-features = false, version = "0.4.39", features = ["serde", "now"] }
+clap = { version = "4", features = ["cargo", "derive", "env"] }
+dashmap = "6.1.0"
+flate2 = "1"
+futures = { version = "0.3.31"}
+futures-bounded = "0.2.4"
+futures-util = { version = "0.3" }
+log = "0.4"
+once_cell = "1.20"
+pin-project = "1.1"
+proc-macro2 = "1.0.92"
+prometheus = { version = "0.13.3", default-features = false }
+prost = "0.13"
+prost-build = "0.13"
+prost-types = "0.13"
+quick-protobuf = "0.8"
+quick-protobuf-codec = "0.3.1"
+serde = { version = "1.0.215", features = ["derive"] }
+serde_json = { version = "1.0.133" }
+scylla ={ version = "0.15.1"}
+thiserror = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3" }
+tracing-panic = { version = "0.1" }
+
+tokio = { version = "1.38.1" }
+tokio-graceful = "0.2"
+tokio-tungstenite = { version = "0.24", features = ["native-tls"] }
+tokio-util = "0.7.13"
+toml = { version = "0.8" }
+tower = "0.5"
+
+# network deps
+libp2p = { version = "0.54.1" }
+multiaddr = "0.18"
+substream-ext = { path = "crates/substream-ext" }
+swarm = { path = "crates/swarm" }
